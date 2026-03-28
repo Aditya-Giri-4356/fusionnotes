@@ -1,24 +1,13 @@
 import React from 'react';
 import styles from './AuthPage.module.css';
 import AnimatedBackground from '../components/AnimatedBackground';
-import { useTheme } from '../context/ThemeContext';
 import { LogIn, User, Mail } from 'lucide-react';
 
 export const AuthPage: React.FC<{ onLogin: () => void }> = ({ onLogin }) => {
-  const { logo } = useTheme();
-
   return (
     <div className={styles.authContainer}>
       <AnimatedBackground />
       <div className={styles.authPanel}>
-        <div className={styles.logoWrap}>
-          <img 
-            src={logo} 
-            alt="FusionNotes" 
-            className={styles.logo} 
-          />
-        </div>
-        
         <div className={styles.authCore}>
           <h1 className={styles.title}>Welcome back.</h1>
           <p className={styles.subtitle}>Log in to access your intelligent workspace.</p>
