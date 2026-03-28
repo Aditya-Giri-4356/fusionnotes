@@ -1,19 +1,15 @@
 import React from 'react';
 import styles from './AuthPage.module.css';
-import AnimatedBackground from '../components/AnimatedBackground';
-import { useTheme } from '../context/ThemeContext';
 import { LogIn, User, Mail } from 'lucide-react';
 
 export const AuthPage: React.FC<{ onLogin: () => void }> = ({ onLogin }) => {
-  const { theme } = useTheme();
-
   return (
     <div className={styles.authContainer}>
       <AnimatedBackground />
       <div className={styles.authPanel}>
         <div className={styles.logoWrap}>
           <img 
-            src={theme === 'dark' ? '/darklogo.png' : '/lightlogo.png'} 
+            src="/logo-transparent.png" 
             alt="FusionNotes" 
             className={styles.logo} 
           />
